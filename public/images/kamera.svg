@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradien Bodi Kamera -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Gradien Lensa Luar -->
+    <radialGradient id="lensOuter" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="70%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+
+    <!-- Gradien Kaca Lensa -->
+    <radialGradient id="lensGlass" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="30%" stop-color="#1e1b4b"/>
+      <stop offset="70%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+
+    <!-- Refleksi Kilauan Kaca -->
+    <linearGradient id="glareGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Bayangan -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Latar Belakang Halus -->
+  <rect width="600" height="500" fill="#f8fafc" rx="16"/>
+
+  <!-- Bayangan Kamera -->
+  <ellipse cx="300" cy="420" rx="200" ry="18" fill="#000000" opacity="0.2" filter="url(#shadow)"/>
+
+  <!-- BAGIAN UTAMA KAMERA -->
+  <!-- Bumbungan Tengah / Viewfinder Housing -->
+  <polygon points="230,150 370,150 390,180 210,180" fill="#1e293b"/>
+  <rect x="250" y="140" width="100" height="15" rx="3" fill="#0f172a"/>
+  <!-- Sepatu Flash (Hot Shoe) -->
+  <rect x="270" y="133" width="60" height="7" rx="1" fill="#94a3b8"/>
+  <rect x="280" y="130" width="40" height="3" fill="#475569"/>
+
+  <!-- Tombol Shutter & Dial Sebelah Kanan -->
+  <rect x="410" y="162" width="35" height="18" rx="3" fill="#94a3b8"/>
+  <rect x="415" y="156" width="25" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="460" y="168" width="25" height="12" rx="2" fill="#475569"/>
+
+  <!-- Bodi Kamera Utama -->
+  <rect x="110" y="180" width="380" height="220" rx="24" fill="url(#bodyGrad)" stroke="#1e293b" stroke-width="4" filter="url(#shadow)"/>
+
+  <!-- Pegangan Handgrip (Kiri) -->
+  <rect x="110" y="180" width="65" height="220" rx="20" fill="#020617" opacity="0.4"/>
+  <!-- Tekstur Grip -->
+  <path d="M 125,200 L 155,200 M 125,215 L 155,215 M 125,230 L 155,230 M 125,245 L 155,245 M 125,260 L 155,260 M 125,275 L 155,275 M 125,290 L 155,290 M 125,305 L 155,305 M 125,320 L 155,320 M 125,335 L 155,335 M 125,350 L 155,350" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Lampu Assist AF / Self-Timer -->
+  <circle cx="200" cy="220" r="10" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <circle cx="200" cy="220" r="6" fill="#ef4444" opacity="0.8"/>
+
+  <!-- Garis Aksen Merah (Gaya Khas Kamera DSLR/Mirrorless) -->
+  <path d="M 172,210 Q 175,250 160,280" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- STRUKTUR LENSA -->
+  <!-- Ring Ring Lensa Luar (Base) -->
+  <circle cx="320" cy="290" r="115" fill="url(#lensOuter)" stroke="#475569" stroke-width="3"/>
+  <circle cx="320" cy="290" r="105" fill="#0f172a"/>
+  
+  <!-- Bergerigi Fokus Lensa -->
+  <circle cx="320" cy="290" r="98" fill="none" stroke="#334155" stroke-width="6" stroke-dasharray="4,4"/>
+
+  <!-- Ring Lensa Tengah & Spesifikasi -->
+  <circle cx="320" cy="290" r="88" fill="#1e293b" stroke="#0f172a" stroke-width="4"/>
+  <text x="320" y="212" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#94a3b8" text-anchor="middle" letter-spacing="1">F/1.4  50mm  LENS  MADE IN JAPAN</text>
+
+  <!-- Kaca Lensa Utam -->
+  <circle cx="320" cy="290" r="72" fill="url(#lensGlass)" stroke="#020617" stroke-width="3"/>
+  <circle cx="320" cy="290" r="48" fill="#020617" opacity="0.6"/>
+  <circle cx="320" cy="290" r="30" fill="#0f172a"/>
+
+  <!-- Pantulan Cahaya Lensa (Aksen Realistis) -->
+  <ellipse cx="295" cy="265" rx="30" ry="18" fill="url(#glareGrad)" transform="rotate(-30 295 265)"/>
+  <circle cx="345" cy="315" r="8" fill="#ffffff" opacity="0.4"/>
+  <circle cx="355" cy="325" r="4" fill="#38bdf8" opacity="0.6"/>
+
+  <!-- Merek / Logo Kamera -->
+  <text x="320" y="172" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="900" fill="#f8fafc" text-anchor="middle" letter-spacing="2">CAM</text>
+</svg>
