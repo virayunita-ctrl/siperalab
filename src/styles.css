@@ -23,8 +23,67 @@ main, .site-header, .site-footer {
   margin-inline: auto;
 }
 .site-header {
-   padding-block: 1rem;
-  border-bottom: 1px solid var(--color-border)
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding-block: var(--space-3);
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+@media (min-width: 48rem) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero__content,
+  .hero__media {
+    flex: 1 1 0;
+  }
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.equipment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+.equipment-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.form-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.form-actions > * {
+  flex: 1 1 10rem;
 }
 .brand {
   color: var(--color-primary-dark);
@@ -66,4 +125,11 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus, button:focus, a:focus {
   outline: 3px solid #93c5fd;
   outline-offset: 2px;
+}
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
